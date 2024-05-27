@@ -3,7 +3,7 @@ describe('Find Spaceship', function() {
 		spaceship = new Spaceship();
 	});
 
-	it('should return "Spaceship lost forever" for an empty string', function() {
+	it('should return "Spaceship lost forever" for an empty map', function() {
 		const map = "";
 		expect(spaceship.findSpaceship(map)).toBe("Spaceship lost forever");
 	});
