@@ -11,6 +11,10 @@ describe('Find Spaceship', function() {
 		const map = "..........\n..........\n";
 		expect(spaceship.findSpaceship(map)).toBe("Map incomplete");
 	});
+	it('should return "Map faulty" if the map has more than one X', function() {
+		const map = ".X........\n..........\n..........\n..........\n..........\nX.........";
+		expect(spaceship.findSpaceship(map)).toBe("Map faulty");
+	});
 });
 
 /*
