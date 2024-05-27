@@ -1,5 +1,5 @@
 // StringCalculator.js
 function Spaceship() {}
-Spaceship.prototype.find = function(map) {
-	//
+Spaceship.prototype.findSpaceship = function(map) {
+	return 0;
 };
