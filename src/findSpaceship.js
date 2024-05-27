@@ -15,10 +15,15 @@ Spaceship.prototype.findSpaceship = function (map) {
         return "Map incomplete";
     }
 	// loop though the map to find X
+	let X_coord = [];
 	for (let y = 0; y < rows.length; y++) {
 		for (let x = 0; x < rows[y].length; x++) {
 			if (rows[y][x] === 'X') {
-				return [x, rows.length - y - 1];
+				if(X_coord.length = 0){
+					X_coord = [x, rows.length - y - 1];
+				}else {
+					return "Map faulty";
+				}
 			}
 		}
 	}
