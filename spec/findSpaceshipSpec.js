@@ -23,6 +23,10 @@ describe('Find Spaceship', function() {
 		const map = "X.........\n..........\n..........\n..........\n..........\n..........";
 		expect(spaceship.findSpaceship(map)).toEqual([0,5]);
 	});
+	it('should return [0,0] if the X is in the bottom left corner', function() {
+		const map = "..........\n..........\n..........\n..........\n..........\nX.........";
+		expect(spaceship.findSpaceship(map)).toEqual([0,0]);
+	});
 });
 
 /*
@@ -33,5 +37,4 @@ ToDoList:
 4. const map="..........\n..........\n..........\n..........\n..........\n.........." -> "Spaceship lost forever"
 5. const map="X.........\n..........\n..........\n..........\n..........\n.........." -> "[0,5]"
 6. const map="..........\n..........\n..........\n..........\n..........\nX........." -> "[0,0]"
-
 */
