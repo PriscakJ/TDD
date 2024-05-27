@@ -5,14 +5,9 @@ Spaceship.prototype.findSpaceship = function (map) {
 	const expectedWidth = 10;
     const expectedHeight = 6;
 
-	// check if map empty
-	if(map === ""){ 
-		return "Spaceship lost forever"; 
-	}
-
-    // validate map size
-    if (rows.length !== expectedHeight || !rows.every(row => row.length === expectedWidth)) {
-        return "Map incomplete";
+	// check if map empty and map size valid
+	if (map === "" || rows.length !== expectedHeight || !rows.every(row => row.length === expectedWidth)) {
+        return map === "" ? "Spaceship lost forever" : "Map incomplete";
     }
 	// loop though the map to find X
 	let spaceshipCoordinates = null;
