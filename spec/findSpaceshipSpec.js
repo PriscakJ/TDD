@@ -15,6 +15,10 @@ describe('Find Spaceship', function() {
 		const map = ".X........\n..........\n..........\n..........\n..........\nX.........";
 		expect(spaceship.findSpaceship(map)).toBe("Map faulty");
 	});
+	it('should return "Spaceship lost forever" if the map has no X', function() {
+		const map = "..........\n..........\n..........\n..........\n..........\n..........";
+		expect(spaceship.findSpaceship(map)).toBe("Spaceship lost forever");
+	});
 });
 
 /*
