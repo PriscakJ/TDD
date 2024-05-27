@@ -30,5 +30,5 @@ Spaceship.prototype.findSpaceship = function (map) {
         }
     }
 
-	return "Spaceship lost forever";
+	return spaceshipCoordinates ? spaceshipCoordinates : "Spaceship lost forever";
 };
